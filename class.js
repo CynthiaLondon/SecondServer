@@ -10,7 +10,7 @@ function handleRequest(req, res) {
 
   // Capture the url the request is made to
   var path = req.url;
-  console.log(path);
+  // console.log(path);
   // Depending on the URL, display a different HTML file.
 
   switch (path) {
@@ -31,7 +31,7 @@ function handleRequest(req, res) {
     case "/css.html":
       console.log('route hit');
        fs.readFile(__dirname + "/css.html", function(err, data) {
-        console.log(JSON.stringify(data));
+        // console.log(JSON.stringify(data));
         res.writeHead(200, { "Content-Type": "text/html" });
         res.end(data);
       });
